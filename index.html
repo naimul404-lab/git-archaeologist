@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Archaeologist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">⌘</span>
+          <span>Git Archaeologist</span>
+        </div>
+        <button class="ghost-btn">Case file</button>
+      </header>
+
+      <main class="hero">
+        <section class="hero-copy">
+          <p class="eyebrow">Version control investigation</p>
+          <h1>Investigate the repo history.</h1>
+          <p class="subtext">
+            Every commit tells a story. Follow the timeline, trace the branches,
+            and recover from common Git mistakes with a clearer mental model.
+          </p>
+
+          <div class="cta-row">
+            <button id="showCaseBtn" class="primary-btn">Open the case</button>
+            <button class="secondary-btn">View suspicious events</button>
+          </div>
+        </section>
+
+        <section class="case-card">
+          <div class="case-header">
+            <span class="chip">Active incident</span>
+            <span class="status">Unsolved</span>
+          </div>
+
+          <div class="case-graph" aria-label="Git branch graph illustration">
+            <div class="commit a">A</div>
+            <div class="commit b">B</div>
+            <div class="commit c">C</div>
+            <div class="commit d">D</div>
+            <div class="commit e">E</div>
+            <div class="branch line-1"></div>
+            <div class="branch line-2"></div>
+            <div class="branch line-3"></div>
+            <div class="branch line-4"></div>
+          </div>
+
+          <h2 id="caseTitle">Case 09: Missing branch trace</h2>
+          <p id="caseDescription">
+            A feature branch was merged, but the history looks incomplete. Follow the evidence to determine what happened.
+          </p>
+        </section>
+      </main>
+
+      <section class="steps-grid">
+        <article class="step-card active">
+          <span class="step-index">01</span>
+          <h3>Trace the history</h3>
+          <p>Understand how each commit changed the project and where the branch split.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-index">02</span>
+          <h3>Check the branches</h3>
+          <p>Identify which branch diverged, merged, or was accidentally reset.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-index">03</span>
+          <h3>Recover safely</h3>
+          <p>Choose the right recovery flow without destroying useful work.</p>
+        </article>
+
+        <article class="step-card">
+          <span class="step-index">04</span>
+          <h3>Learn the pattern</h3>
+          <p>Turn the symptom into a repeatable Git habit and a stronger workflow.</p>
+        </article>
+      </section>
+
+      <section class="incident-panel">
+        <div class="panel-header">
+          <h3>Incident log</h3>
+          <button class="mini-btn">+ Add clue</button>
+        </div>
+
+        <ul id="incidentList">
+          <li>Feature branch was created from main after commit C.</li>
+          <li>Three additional commits were made on the feature branch.</li>
+          <li>Merge was attempted, but the timeline now looks ambiguous.</li>
+          <li>Investigators suspect a reset or forced change happened near commit D.</li>
+        </ul>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
